@@ -2,13 +2,13 @@
 
 /**
  * binary_tree_preorder - prints tree in preorder
- * @tree: input tree
- * @func: input function
+ * @tree: tree input
+ * @func: function input
  *
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
-	if (tree || func == NULL)
+	if (tree == NULL || func == NULL)
 		return;
 	func(tree->n);
 	binary_tree_preorder(tree->left, func);
